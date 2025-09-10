@@ -1,0 +1,52 @@
+/* Estilos generales del portfolio */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: white;
+  color: black;
+}
+body{
+  background-image: url('../img/font2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Se le quita el scroll para los navegadores modernos */
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* margen para los titulos y color base */
+h1, h2, h3 {
+  margin-bottom: 10px;
+  color: #1909fe;
+}
+
+/* color de los parrafos y separacion pequeña de los textos */
+p {
+  /* line-height: 1.6;da altura a los parrafos */
+  color: #444;
+}
+
+/* estilos base para las secciones, con responsive */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* estilos para los textos resaltados */
+.resaltado {
+  color: #0a66c2;
+  font-weight: bold;
+}
+
+/* estilos para el footer del portfolio */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  color: white;
+}

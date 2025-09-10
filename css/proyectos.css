@@ -1,0 +1,66 @@
+/* estilos para la seccion de proyectos */
+.seccion-proyectos {
+  text-align: center;
+}
+
+/* arreglo del grid para varios proyectos responsive */
+.rejilla-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* estilos de las targetas */
+.tarjeta-proyecto {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.2s;
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta-proyecto p{
+  color: white;
+}
+
+/* animacion de al hacer hover */
+.tarjeta-proyecto:hover {
+  transform: translateY(-7px);
+  border-color: #0a66c2;
+}
+
+/* estilos de las imagenes en los proyectos */
+.image-proyectos img {
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 1);
+}
+
+.redes-proyectos {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+
+/* botones para las redes sociales*/
+.redes-proyectos {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+/* estilos para los iconos de las redes sociales */
+.redes-proyectos a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border:1px solid black;
+  box-shadow: 0 3px 15px rgb(134, 134, 134);
+}
+
+.redes-proyectos a img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 25px rgb(134, 134, 134);
+}

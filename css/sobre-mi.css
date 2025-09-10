@@ -1,0 +1,10 @@
+/* estilos para la seccion sobre mi */
+.sobre-mi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-sobre-mi p {
+  color: white;
+}
+

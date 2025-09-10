@@ -1,0 +1,63 @@
+/* seccion de mi perfil */
+#perfil {
+    /* ajuste de flexibilidad */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 45px;
+  gap: 20px;
+  padding: 40px 20px;
+  color: #000;
+}
+
+/* diseños de la imagen de perfil */
+.foto-perfil {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-perfil img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover; /* para que la imagen se ajuste mejor */
+}
+
+/* flexibilidad  para el texto */
+.texto-sobre-mi {
+  flex: 1;
+  min-width: 250px;
+}
+
+.texto-sobre-mi h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.texto-sobre-mi h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+/* botones para las redes sociales*/
+.redes {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+/* estilos para los iconos de las redes sociales */
+.redes a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border:1px solid black;
+  box-shadow: 0 3px 15px rgb(82, 82, 82);
+}
+
+.redes a img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 22px rgb(82, 82, 82);
+}
