@@ -6,5 +6,7 @@
 }
 .contenedor-sobre-mi p {
   color: white;
+  text-align: justify;
+  font-size: 1rem;
 }
 

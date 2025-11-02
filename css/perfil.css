@@ -50,14 +50,6 @@
 }
 /* estilos para los iconos de las redes sociales */
 .redes a img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border:1px solid black;
-  box-shadow: 0 3px 15px rgb(82, 82, 82);
-}
-
-.redes a img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 22px rgb(82, 82, 82);
+  width: 25px;
+  height: 25px;
 }
