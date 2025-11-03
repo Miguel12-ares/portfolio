@@ -82,43 +82,97 @@
 
   <!-- mis proyectos -->
   <section id="proyectos" class="seccion-proyectos">
-    <h1 >Proyectos</h1>
-    <!-- grid de los proyectos -->
-    <div class="rejilla-proyectos">
-        <!-- targetas de proyectos -->
-      <div class="tarjeta-proyecto">
-        <h2 >QuickExit</h2>
-        <div class="image-proyectos">
-            <img src="img/quickexit.png" alt="QuickExit">
+    <h1>Proyectos</h1>
+    <!-- Contenedor principal de proyectos -->
+    <div class="contenedor-proyectos">
+      
+      <!-- Proyecto 1: QuickExit -->
+      <article class="proyecto-card">
+        <div class="proyecto-contenido">
+          <!-- Mockup principal -->
+          <figure class="proyecto-mockup">
+            <img id="quickexit-main" src="img/quickexit.png" alt="QuickExit - Vista principal" class="mockup-imagen">
+          </figure>
+          
+          <!-- Thumbnails navegables -->
+          <div class="proyecto-thumbnails">
+            <img src="img/quickexit.png" alt="QuickExit - Vista 1" class="thumbnail active" data-target="quickexit-main">
+            <img src="img/quickexit.png" alt="QuickExit - Vista 2" class="thumbnail" data-target="quickexit-main">
+            <img src="img/quickexit.png" alt="QuickExit - Vista 3" class="thumbnail" data-target="quickexit-main">
+            <img src="img/proconnect.png" alt="QuickExit - Vista 4" class="thumbnail" data-target="quickexit-main">
+          </div>
         </div>
-        <p>Es una plataforma diseñada para facilitar la salida rápida de los aprendizes SENA dentro de las instalaciones</p>
-        <!-- redes de los proyectos -->
-        <div class="redes-proyectos">
-        <a href="https://github.com/Miguel12-ares/quickexit" target="_blank">
-            <img src="img/github.png" alt="git hub - quickexit">
-        </a>
-        <a href="https://quickexit-testing.up.railway.app/" target="_blank">
-            <img src="img/web.png" alt="web - quickexit">
-        </a>
+        
+        <!-- Información del proyecto -->
+        <div class="proyecto-info">
+          <h2 class="proyecto-titulo">QuickExit</h2>
+          <p class="proyecto-descripcion">Es una plataforma diseñada para facilitar la salida rápida de los aprendices SENA dentro de las instalaciones</p>
+          
+          <!-- Badges de tecnologías -->
+          <div class="proyecto-tecnologias">
+            <span class="tech-badge">PHP</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+          </div>
+          
+          <!-- Botones de acción -->
+          <div class="proyecto-acciones">
+            <a href="https://quickexit-testing.up.railway.app/" target="_blank" class="btn btn-sitio">
+              <img src="img/web.png" alt="Web">
+              Sitio Web
+            </a>
+            <a href="https://github.com/Miguel12-ares/quickexit" target="_blank" class="btn btn-github">
+              <img src="img/github.png" alt="GitHub">
+              Github
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="tarjeta-proyecto">
-        <h2 >ProConnect</h2>
-        <div class="image-proyectos">
-            <img src="img/proconnect.png" alt="ProConnect" href="https://github.com/Miguel12-ares/Proconenct">
+      </article>
+
+      <!-- Proyecto 2: ProConnect -->
+      <article class="proyecto-card">
+        <div class="proyecto-contenido">
+          <!-- Mockup principal -->
+          <figure class="proyecto-mockup">
+            <img id="proconnect-main" src="img/proconnect.png" alt="ProConnect - Vista principal" class="mockup-imagen">
+          </figure>
+          
+          <!-- Thumbnails navegables -->
+          <div class="proyecto-thumbnails">
+            <img src="img/proconnect.png" alt="ProConnect - Vista 1" class="thumbnail active" data-target="proconnect-main">
+            <img src="img/quickexit.png" alt="ProConnect - Vista 2" class="thumbnail" data-target="proconnect-main">
+            <img src="img/proconnect.png" alt="ProConnect - Vista 3" class="thumbnail" data-target="proconnect-main">
+            <img src="img/proconnect.png" alt="ProConnect - Vista 4" class="thumbnail" data-target="proconnect-main">
+          </div>
         </div>
-        <p>Es una plataforma diseñada para facilitar la conexion entre profesionales y sus clientes</p>
-        <!-- redes de los proyectos -->
-        <div class="redes-proyectos">
-        <a href="https://github.com/Miguel12-ares/Proconenct" target="_blank">
-            <img src="img/github.png" alt="git hub - proconnect">
-        </a>
+        
+        <!-- Información del proyecto -->
+        <div class="proyecto-info">
+          <h2 class="proyecto-titulo">ProConnect</h2>
+          <p class="proyecto-descripcion">Es una plataforma diseñada para facilitar la conexión entre profesionales y sus clientes con transferencias propias entre ellos</p>
+          
+          <!-- Badges de tecnologías -->
+          <div class="proyecto-tecnologias">
+            <span class="tech-badge">PHP</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+          </div>
+          
+          <!-- Botones de acción -->
+          <div class="proyecto-acciones single-button">
+            <a href="https://github.com/Miguel12-ares/Proconenct" target="_blank" class="btn btn-github">
+              <img src="img/github.png" alt="GitHub">
+              Github
+            </a>
+          </div>
         </div>
-      </div>
+      </article>
+
     </div>
-    </div>
-      <!-- Siguientes proyectos -->
- 
   </section>
   <section id="formacion">
     <h1><strong>Formación</strong></h1>
@@ -151,6 +205,37 @@
   <footer class="footer">
     <p>@ 2025 - Miguel Stiven Cortes Duarte - Developer</p>
   </footer>
+
+  <!-- JavaScript para funcionalidad de thumbnails -->
+  <script>
+    // Funcionalidad para cambio de imágenes en thumbnails - Principio Single Responsibility
+    document.addEventListener('DOMContentLoaded', function() {
+      // Obtener todos los thumbnails
+      const thumbnails = document.querySelectorAll('.thumbnail');
+      
+      // Agregar event listener a cada thumbnail
+      thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+          // Obtener el ID de la imagen principal objetivo
+          const targetId = this.getAttribute('data-target');
+          const mainImage = document.getElementById(targetId);
+          
+          // Cambiar la imagen principal
+          if (mainImage) {
+            mainImage.src = this.src;
+            mainImage.alt = this.alt;
+          }
+          
+          // Remover clase active de todos los thumbnails del mismo proyecto
+          const projectThumbnails = this.parentElement.querySelectorAll('.thumbnail');
+          projectThumbnails.forEach(thumb => thumb.classList.remove('active'));
+          
+          // Agregar clase active al thumbnail clickeado
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>

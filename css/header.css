@@ -9,13 +9,12 @@
   left: 0;
   padding: 15px 40px;
   /* Fondo transparente con color tenue a azul */
-  background-color: rgba(180, 193, 249, 0.1); 
+  background-color: rgba(0, 0, 0, 0.5); 
   /* Efecto de filtro en el fondo al pasar sobre el */
   backdrop-filter: blur(5px); 
   /* z-index para asegurar que el encabezado este sobre el texto */
   z-index: 10;
   border: none;
-  box-shadow: 0 1px 10px rgba(99, 127, 249, 0.8);
 }
 
 /* hipervinculos del nav */
