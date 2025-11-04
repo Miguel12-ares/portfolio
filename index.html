@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/perfil.css">
   <link rel="stylesheet" href="css/sobre-mi.css">
-  <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/stack.css">
   <link rel="stylesheet" href="css/proyectos.css">
-  <link rel="icon" type="image/x-icon" href="img/icono.png">
+  <!-- Iconos locales para tecnologías -->
+  <link rel="icon" type="image/x-icon" href="img/Icon/icono.png">
 </head>
 <body>
   <!-- Fondo estático con gradientes - Open/Closed Principle aplicado -->
@@ -22,6 +23,7 @@
     <!-- nav para navegacion rapida -->
     <nav class="nav">
       <a href="#sobre-mi">Sobre mi</a>
+      <a href="#stack">Stack</a>
       <a href="#proyectos">Proyectos</a>
       <a href="/pdf/Currículum-Miguel_Cortes.pdf">Ver CV</a>
     </nav>
@@ -30,17 +32,17 @@
   <!-- seccion de mi perfil -->
   <section id="perfil">
   <div class="foto-perfil">
-    <img src="img/foto-perfil.png" alt="Foto de perfil">
+    <img src="img/perfil/foto-perfil.png" alt="Foto de perfil">
   </div>
   <div class="texto-sobre-mi">
     <h1>Miguel Stiven Cortes</h1>
     <h3>Estudiante de Desarrollo de Software</h3>
     <div class="redes">
         <a href="https://github.com/Miguel12-ares" target="_blank">
-            <img src="img/github.png" alt="git hub">
+            <img src="img/Icon/tools/github.png" alt="git hub">
         </a>
         <a href="https://www.linkedin.com/in/miguel-stiven-cortes-duarte-526046376/" target="_blank">
-            <img src="img/linkedin.png" alt="Linkedin">
+            <img src="img/Icon/tools/linkedin.png" alt="Linkedin">
         </a>
         </div>
     </div>
@@ -59,121 +61,175 @@
             desarrollador de software.
         </p>
         <p>
-          <strong>Habilidades:</strong> PHP, JavaScript, HTML, CSS, SQL
-        </p>
-        <p>
           <strong> "Siempre avanzando al ritmo que la tecnologia."</strong>
         </p>
     </div>    
   </section>
 
-  <div  id="skills" class="seccion-habilidades">
-    <h1>Habilidades</h1>
-    <section id="habilidades">
-      <div class="skill"><img src="img/php.png" alt="PHP"></div>
-      <div class="skill"><img src="img/flask.png" alt="Flask"></div> 
-      <div class="skill"><img src="img/docker.png" alt="Docker"></div>
-      <div class="skill"><img src="img/mysql.png" alt="MySQL"></div>
-      <div class="skill"><img src="img/c.png" alt="C#"></div>
-       
+    <!-- mis proyectos -->
+    <section id="proyectos" class="seccion-proyectos">
+      <h1>Proyectos</h1>
+      <!-- Contenedor principal de proyectos -->
+      <div class="contenedor-proyectos">
+        
+        <!-- Proyecto 1: QuickExit -->
+        <article class="proyecto-card">
+          <div class="proyecto-contenido">
+            <!-- Mockup principal -->
+            <figure class="proyecto-mockup">
+              <img id="quickexit-main" src="img/img-projects/quickexit/quickexit-pc.png" alt="QuickExit - Vista principal" class="mockup-imagen">
+            </figure>
+            
+            <!-- Thumbnails navegables -->
+            <div class="proyecto-thumbnails">
+              <img src="img/img-projects/quickexit/quickexit-pc.png" alt="QuickExit - PC" class="thumbnail active" data-target="quickexit-main">
+              <img src="img/img-projects/quickexit/quickexit-pc2.png" alt="QuickExit - PC 2" class="thumbnail" data-target="quickexit-main">
+              <img src="img/img-projects/quickexit/quickexit-tablet.png" alt="QuickExit - Tablet" class="thumbnail" data-target="quickexit-main">
+              <img src="img/img-projects/quickexit/quickexit-phone.png" alt="QuickExit - Móvil" class="thumbnail" data-target="quickexit-main">
+            </div>
+          </div>
+          
+          <!-- Información del proyecto -->
+          <div class="proyecto-info">
+            <h2 class="proyecto-titulo">QuickExit</h2>
+            <p class="proyecto-descripcion">Es una plataforma diseñada para facilitar la salida rápida de los aprendices SENA dentro de las instalaciones</p>
+            
+            <!-- Badges de tecnologías -->
+            <div class="proyecto-tecnologias">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+            </div>
+            
+            <!-- Botones de acción -->
+            <div class="proyecto-acciones">
+              <a href="https://quickexit-testing.up.railway.app/" target="_blank" class="btn btn-sitio"> 
+                Sitio Web
+              </a>
+              <a href="https://github.com/Miguel12-ares/quickexit" target="_blank" class="btn btn-github">
+                <img src="img/Icon/tools/github.png" alt="GitHub">
+                Github
+              </a>
+            </div>
+          </div>
+        </article>
+  
+        <!-- Proyecto 2: ProConnect -->
+        <article class="proyecto-card">
+          <div class="proyecto-contenido">
+            <!-- Mockup principal -->
+            <figure class="proyecto-mockup">
+              <img id="proconnect-main" src="img/img-projects/proconnect/proconnect-pc.png" alt="ProConnect - Vista principal" class="mockup-imagen">
+            </figure>
+            
+            <!-- Thumbnails navegables -->
+            <div class="proyecto-thumbnails">
+              <img src="img/img-projects/proconnect/proconnect-pc.png" alt="ProConnect - PC" class="thumbnail active" data-target="proconnect-main">
+              <img src="img/img-projects/proconnect/proconnect-pc2.png" alt="ProConnect - PC 2" class="thumbnail" data-target="proconnect-main">
+              <img src="img/img-projects/proconnect/proconnect-tablet.png" alt="ProConnect - Tablet" class="thumbnail" data-target="proconnect-main">
+              <img src="img/img-projects/proconnect/proconnect-phone.png" alt="ProConnect - Móvil" class="thumbnail" data-target="proconnect-main">
+            </div>
+          </div>
+          
+          <!-- Información del proyecto -->
+          <div class="proyecto-info">
+            <h2 class="proyecto-titulo">ProConnect</h2>
+            <p class="proyecto-descripcion">Es una plataforma diseñada para facilitar la conexión entre profesionales y sus clientes con transferencias propias entre ellos</p>
+            
+            <!-- Badges de tecnologías -->
+            <div class="proyecto-tecnologias">
+              <span class="tech-badge">ASP.NET</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+            </div>
+            
+            <!-- Botones de acción -->
+            <div class="proyecto-acciones single-button">
+              <a href="https://github.com/Miguel12-ares/Proconenct" target="_blank" class="btn btn-github">
+                <img src="img/Icon/tools/github.png" alt="GitHub">
+                Github
+              </a>
+            </div>
+          </div>
+        </article>
+  
+      </div>
     </section>
-    
-  </div>
 
-  <!-- mis proyectos -->
-  <section id="proyectos" class="seccion-proyectos">
-    <h1>Proyectos</h1>
-    <!-- Contenedor principal de proyectos -->
-    <div class="contenedor-proyectos">
-      
-      <!-- Proyecto 1: QuickExit -->
-      <article class="proyecto-card">
-        <div class="proyecto-contenido">
-          <!-- Mockup principal -->
-          <figure class="proyecto-mockup">
-            <img id="quickexit-main" src="img/quickexit.png" alt="QuickExit - Vista principal" class="mockup-imagen">
-          </figure>
-          
-          <!-- Thumbnails navegables -->
-          <div class="proyecto-thumbnails">
-            <img src="img/quickexit.png" alt="QuickExit - Vista 1" class="thumbnail active" data-target="quickexit-main">
-            <img src="img/quickexit.png" alt="QuickExit - Vista 2" class="thumbnail" data-target="quickexit-main">
-            <img src="img/quickexit.png" alt="QuickExit - Vista 3" class="thumbnail" data-target="quickexit-main">
-            <img src="img/proconnect.png" alt="QuickExit - Vista 4" class="thumbnail" data-target="quickexit-main">
-          </div>
+  <!-- Sección Stack de Tecnologías -->
+  <section id="stack" class="seccion-stack">
+    <h1>Stack</h1>
+    <div class="stack-container">
+      <!-- Grid de tecnologías -->
+      <div class="tech-grid">
+        <!-- Frontend Technologies -->
+        <div class="tech-item" data-tech="HTML5">
+          <img src="img/Icon/web/icon-html.png" alt="HTML5" class="tech-icon">
+        </div>
+        <div class="tech-item" data-tech="CSS3">
+          <img src="img/Icon/web/icon-css.png" alt="CSS3" class="tech-icon">
+        </div>
+        <div class="tech-item" data-tech="JavaScript">
+          <img src="img/Icon/web/icon-js.png" alt="JavaScript" class="tech-icon">
         </div>
         
-        <!-- Información del proyecto -->
-        <div class="proyecto-info">
-          <h2 class="proyecto-titulo">QuickExit</h2>
-          <p class="proyecto-descripcion">Es una plataforma diseñada para facilitar la salida rápida de los aprendices SENA dentro de las instalaciones</p>
-          
-          <!-- Badges de tecnologías -->
-          <div class="proyecto-tecnologias">
-            <span class="tech-badge">PHP</span>
-            <span class="tech-badge">JavaScript</span>
-            <span class="tech-badge">MySQL</span>
-            <span class="tech-badge">HTML</span>
-            <span class="tech-badge">CSS</span>
-          </div>
-          
-          <!-- Botones de acción -->
-          <div class="proyecto-acciones">
-            <a href="https://quickexit-testing.up.railway.app/" target="_blank" class="btn btn-sitio">
-              <img src="img/web.png" alt="Web">
-              Sitio Web
-            </a>
-            <a href="https://github.com/Miguel12-ares/quickexit" target="_blank" class="btn btn-github">
-              <img src="img/github.png" alt="GitHub">
-              Github
-            </a>
-          </div>
+        <!-- Backend Technologies -->
+        <div class="tech-item" data-tech="PHP">
+          <img src="img/Icon/backend/php.png" alt="PHP" class="tech-icon">
         </div>
-      </article>
-
-      <!-- Proyecto 2: ProConnect -->
-      <article class="proyecto-card">
-        <div class="proyecto-contenido">
-          <!-- Mockup principal -->
-          <figure class="proyecto-mockup">
-            <img id="proconnect-main" src="img/proconnect.png" alt="ProConnect - Vista principal" class="mockup-imagen">
-          </figure>
-          
-          <!-- Thumbnails navegables -->
-          <div class="proyecto-thumbnails">
-            <img src="img/proconnect.png" alt="ProConnect - Vista 1" class="thumbnail active" data-target="proconnect-main">
-            <img src="img/quickexit.png" alt="ProConnect - Vista 2" class="thumbnail" data-target="proconnect-main">
-            <img src="img/proconnect.png" alt="ProConnect - Vista 3" class="thumbnail" data-target="proconnect-main">
-            <img src="img/proconnect.png" alt="ProConnect - Vista 4" class="thumbnail" data-target="proconnect-main">
-          </div>
+        <div class="tech-item" data-tech="Python">
+          <img src="img/Icon/backend/python.png" alt="Python" class="tech-icon">
+        </div>
+        <div class="tech-item" data-tech="Java">
+          <img src="img/Icon/backend/java.png" alt="Java" class="tech-icon">
+        </div>
+        <div class="tech-item" data-tech="C#">
+          <img src="img/Icon/backend/c.png" alt="C#" class="tech-icon">
         </div>
         
-        <!-- Información del proyecto -->
-        <div class="proyecto-info">
-          <h2 class="proyecto-titulo">ProConnect</h2>
-          <p class="proyecto-descripcion">Es una plataforma diseñada para facilitar la conexión entre profesionales y sus clientes con transferencias propias entre ellos</p>
-          
-          <!-- Badges de tecnologías -->
-          <div class="proyecto-tecnologias">
-            <span class="tech-badge">PHP</span>
-            <span class="tech-badge">JavaScript</span>
-            <span class="tech-badge">MySQL</span>
-            <span class="tech-badge">HTML</span>
-            <span class="tech-badge">CSS</span>
-          </div>
-          
-          <!-- Botones de acción -->
-          <div class="proyecto-acciones single-button">
-            <a href="https://github.com/Miguel12-ares/Proconenct" target="_blank" class="btn btn-github">
-              <img src="img/github.png" alt="GitHub">
-              Github
-            </a>
-          </div>
+        <!-- Frameworks & Libraries -->
+        <div class="tech-item" data-tech="Flask">
+          <img src="img/Icon/frameworks/flask.png" alt="Flask" class="tech-icon">
         </div>
-      </article>
-
+        <div class="tech-item" data-tech="ASP.NET">
+          <img src="img/Icon/frameworks/Mvs.png" alt="ASP.NET" class="tech-icon">
+        </div>
+        
+        <!-- Database -->
+        <div class="tech-item" data-tech="MySQL">
+          <img src="img/Icon/db/mysql.png" alt="MySQL" class="tech-icon">
+        </div>
+        
+        <!-- Tools & Others -->
+        <div class="tech-item" data-tech="Git">
+          <img src="img/Icon/tools/git.png" alt="Git" class="tech-icon">
+        </div>
+        <div class="tech-item" data-tech="GitHub">
+          <img src="img/Icon/tools/github.png" alt="GitHub" class="tech-icon">
+        </div>
+        <div class="tech-item" data-tech="Docker">
+          <img src="img/Icon/tools/docker.png" alt="Docker" class="tech-icon">
+        </div>
+        <div class="tech-item" data-tech="VS Code">
+          <img src="img/Icon/tools/icon-vscode.png" alt="VS Code" class="tech-icon">
+        </div>
+        <div class="tech-item" data-tech="Figma">
+          <img src="img/Icon/tools/icon-figma.png" alt="Figma" class="tech-icon">
+        </div>
+        
+        <!-- Operating System -->
+        <div class="tech-item" data-tech="Linux">
+          <img src="img/Icon/os/icon-linux.png" alt="Linux" class="tech-icon">
+        </div>
+      </div>
     </div>
   </section>
+
+
   <section id="formacion">
     <h1><strong>Formación</strong></h1>
     <div class="formacion">
@@ -206,7 +262,7 @@
     <p>@ 2025 - Miguel Stiven Cortes Duarte - Developer</p>
   </footer>
 
-  <!-- JavaScript para funcionalidad de thumbnails -->
+  <!-- JavaScript para funcionalidad de thumbnails y Stack -->
   <script>
     // Funcionalidad para cambio de imágenes en thumbnails - Principio Single Responsibility
     document.addEventListener('DOMContentLoaded', function() {
@@ -232,6 +288,49 @@
           
           // Agregar clase active al thumbnail clickeado
           this.classList.add('active');
+        });
+      });
+
+      // Funcionalidad para la sección Stack - Principio Single Responsibility
+      const stackSection = document.getElementById('stack');
+      const techItems = document.querySelectorAll('.tech-item');
+      
+      // Observador de intersección para animaciones al hacer scroll
+      const observerOptions = {
+        threshold: 0.3,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const stackObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Activar animaciones escalonadas cuando la sección es visible
+            techItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.style.animationPlayState = 'running';
+              }, index * 100);
+            });
+          }
+        });
+      }, observerOptions);
+      
+      if (stackSection) {
+        stackObserver.observe(stackSection);
+      }
+      
+      // Efecto de click en elementos de tecnología
+      techItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const techName = this.getAttribute('data-tech');
+          
+          // Efecto visual de click
+          this.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            this.style.transform = '';
+          }, 150);
+          
+          // Opcional: Mostrar información adicional o navegar a documentación
+          console.log(`Tecnología seleccionada: ${techName}`);
         });
       });
     });
