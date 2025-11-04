@@ -40,7 +40,7 @@
 /* Grid de tecnologías */
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 2.8rem;
   justify-items: center;
   align-items: center;
@@ -51,8 +51,8 @@
 
 /* Elementos individuales de tecnología */
 .tech-item {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   background: var(--stack-item-bg);
   border: 1px solid var(--stack-item-border);
   border-radius: 16px;

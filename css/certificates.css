@@ -1,0 +1,350 @@
+/* Estilos para la sección Skills/Logros - Principio Single Responsibility */
+/* Variables CSS para la sección Skills */
+:root {
+  --skills-bg: transparent;
+  --skills-text: #ffffff;
+  --skills-accent: #308cce;
+  --skills-card-bg: rgba(255, 255, 255, 0.08);
+  --skills-card-border: rgba(255, 255, 255, 0.15);
+  --skills-card-hover-bg: rgba(255, 255, 255, 0.12);
+  --skills-card-hover-border: rgba(255, 255, 255, 0.25);
+  --skills-date-bg: rgba(48, 140, 206, 0.2);
+  --skills-date-text: #308cce;
+  --skills-btn-bg: #308cce;
+  --skills-btn-hover: #2a7bb8;
+  --skills-shadow: rgba(0, 0, 0, 0.3);
+  --skills-hover-shadow: rgba(48, 140, 206, 0.3);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Contenedor principal de la sección Skills */
+.seccion-skills {
+  margin: 40px auto;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  max-width: 1200px;
+}
+
+/* Título de la sección */
+.seccion-skills h1 {
+  color: var(--skills-text);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+/* Contenedor principal del skills */
+.skills-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Grid de certificados - 2 columnas responsive */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Tarjetas individuales de certificados */
+.certificate-card {
+  background: var(--skills-card-bg);
+  border: 1px solid var(--skills-card-border);
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 450px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  position: relative;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: left;
+}
+
+/* Fecha del certificado */
+.certificate-date {
+  background: var(--skills-date-bg);
+  color: var(--skills-date-text);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 16px;
+  letter-spacing: 0.025em;
+}
+
+/* Contenedor de la imagen del certificado */
+.certificate-image {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Imagen miniatura del certificado */
+.cert-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: var(--transition-smooth);
+  border-radius: 8px;
+}
+
+/* Información del certificado */
+.certificate-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Título del certificado */
+.certificate-title {
+  color: var(--skills-text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Descripción del certificado */
+.certificate-description {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Botón Ver Certificado */
+.btn-certificate {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--skills-btn-bg);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition-smooth);
+  align-self: flex-start;
+  margin-top: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Ícono del botón */
+.certificate-icon {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  transition: var(--transition-smooth);
+}
+
+/* Efectos hover para la tarjeta completa */
+.certificate-card:hover {
+  transform: translateY(-5px);
+  background: var(--skills-card-hover-bg);
+  border-color: var(--skills-card-hover-border);
+  box-shadow: 
+    0 20px 40px var(--skills-shadow),
+    0 0 30px var(--skills-hover-shadow);
+}
+
+.certificate-card:hover .cert-thumbnail {
+  transform: scale(1.05);
+}
+
+/* Efecto hover para el botón */
+.btn-certificate:hover {
+  background: var(--skills-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(48, 140, 206, 0.4);
+}
+
+.btn-certificate:hover .certificate-icon {
+  transform: translateX(2px);
+}
+
+/* Efecto de click en tarjeta */
+.certificate-card:active {
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+/* Pantallas medianas y menores - cambio a 1 columna */
+@media (max-width: 1100px) {
+  .seccion-skills {
+    margin: 20px 10px;
+    padding: 40px 15px;
+  }
+  
+  .seccion-skills h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .certificates-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .certificate-card {
+    padding: 20px;
+    max-width: none;
+  }
+  
+  .certificate-image {
+    height: 350px;
+    margin-bottom: 16px;
+  }
+  
+  .certificate-title {
+    font-size: 1.1rem;
+  }
+  
+  .certificate-description {
+    font-size: 0.9rem;
+  }
+  
+  .btn-certificate {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .seccion-skills {
+    margin: 15px 5px;
+    padding: 30px 10px;
+  }
+  
+  .seccion-skills h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .certificates-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .certificate-card {
+    padding: 18px;
+    text-align: center;
+  }
+  
+  .certificate-image {
+    height: 300px;
+    margin-bottom: 18px;
+  }
+  
+  .certificate-title {
+    font-size: 1.15rem;
+    text-align: center;
+  }
+  
+  .certificate-description {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .btn-certificate {
+    align-self: center;
+    padding: 12px 18px;
+    font-size: 0.9rem;
+  }
+  
+  .certificate-date {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}
+
+/* Animación de entrada para las tarjetas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.certificate-card {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Retrasos escalonados para la animación */
+.certificate-card:nth-child(1) { animation-delay: 0.1s; }
+.certificate-card:nth-child(2) { animation-delay: 0.2s; }
+.certificate-card:nth-child(3) { animation-delay: 0.3s; }
+.certificate-card:nth-child(4) { animation-delay: 0.4s; }
+.certificate-card:nth-child(5) { animation-delay: 0.5s; }
+.certificate-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Efecto de pulso sutil en el botón */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(48, 140, 206, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(48, 140, 206, 0);
+  }
+}
+
+.btn-certificate:focus {
+  outline: none;
+  animation: pulse 2s infinite;
+}
+
+/* Mejoras de accesibilidad */
+.certificate-card:focus-within {
+  outline: 2px solid var(--skills-accent);
+  outline-offset: 2px;
+}
+
+/* Efecto de carga para imágenes */
+.cert-thumbnail {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0.1) 100%);
+  background-size: 200% 100%;
+}
+
+.cert-thumbnail[src=""] {
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
