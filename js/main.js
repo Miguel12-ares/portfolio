@@ -32,22 +32,22 @@ class PortfolioApp {
       // Inicializar gestor de thumbnails
       if (window.ThumbnailManager) {
         this.thumbnailManager = new window.ThumbnailManager();
-        console.log('✅ ThumbnailManager inicializado correctamente');
+        console.log('ThumbnailManager inicializado correctamente');
       } else {
-        console.warn('⚠️ ThumbnailManager no está disponible');
+        console.warn('ThumbnailManager no está disponible');
       }
 
       // Inicializar gestor del stack
       if (window.StackManager) {
         this.stackManager = new window.StackManager();
-        console.log('✅ StackManager inicializado correctamente');
+        console.log('StackManager inicializado correctamente');
       } else {
-        console.warn('⚠️ StackManager no está disponible');
+        console.warn(' StackManager no está disponible');
       }
 
-      console.log('🚀 Portafolio inicializado correctamente');
+      console.log('Portafolio inicializado correctamente');
     } catch (error) {
-      console.error('❌ Error al inicializar el portafolio:', error);
+      console.error('Error al inicializar el portafolio:', error);
     }
   }
 
@@ -63,7 +63,7 @@ class PortfolioApp {
       this.stackManager.refresh();
     }
     
-    console.log('🔄 Portafolio reinicializado');
+    console.log('Portafolio reinicializado');
   }
 
   /**
@@ -74,7 +74,7 @@ class PortfolioApp {
       this.stackManager.destroy();
     }
     
-    console.log('🧹 Recursos del portafolio limpiados');
+    console.log('Recursos del portafolio limpiados');
   }
 }
 
