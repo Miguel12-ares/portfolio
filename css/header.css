@@ -17,6 +17,14 @@
   border: none;
 }
 
+/* Navegación responsive */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
 /* hipervinculos del nav */
 .header a {
   margin-left: 20px;
@@ -30,4 +38,40 @@
 /* "animacion" al hacer hover */
 .header a:hover {
   text-decoration: underline;
+}
+
+/* Responsive Design para el header */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 20px;
+    justify-content: center;
+  }
+  
+  .nav {
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .header a {
+    margin-left: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 8px 15px;
+  }
+  
+  .nav {
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header a {
+    margin-left: 0;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+  }
 }

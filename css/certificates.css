@@ -348,3 +348,82 @@
     background-position: 200% 0;
   }
 }
+
+/* ===== ESTILOS PARA BOTÓN VER MÁS CERTIFICADOS ===== */
+
+/* Contenedor del botón Ver más (reutiliza estilos de proyectos) */
+.ver-mas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+/* Botón Ver más certificados */
+.btn-ver-mas {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--skills-accent);
+  border: 2px solid var(--skills-accent);
+  padding: 16px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Icono de flecha */
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  transition: var(--transition-smooth);
+}
+
+/* Efecto hover del botón Ver más certificados */
+.btn-ver-mas:hover {
+  background: var(--skills-accent);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(48, 140, 206, 0.4);
+}
+
+.btn-ver-mas:hover .arrow-icon {
+  transform: translate(3px, -3px);
+}
+
+/* Efecto de click */
+.btn-ver-mas:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive para botón Ver más certificados */
+@media (max-width: 768px) {
+  .ver-mas-container {
+    margin-top: 2rem;
+  }
+  
+  .btn-ver-mas {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+  
+  .arrow-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-ver-mas {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}
